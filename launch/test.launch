@@ -1,0 +1,20 @@
+<launch>
+    <node name="serial" pkg="rosserial_arduino" type="serial_node.py" output="screen">
+        <param name="~port" value="/dev/ttyACM0"/>
+    </node>
+    <node name="link1" pkg="manip" type="manip_node" output="screen">
+        <param name="kp" value="11.0"/>
+        <param name="ki" value="0.1"/>
+        <param name="kd" value="0.01"/>
+    </node>
+    <!-- <node name="link2" pkg="manip" type="manip_node" output="screen">
+        <param name="kp" value="5.0"/>
+        <param name="ki" value="0.0"/>
+        <param name="kd" value="0.0"/>
+    </node> -->
+    <!--node name="link3" pkg="manip" type="manip_node" output="screen">
+        <param name="kp" value="11.0"/>
+        <param name="kp" value="0.0"/>
+        <param name="kp" value="0.0"/>
+    </node-->
+</launch>
