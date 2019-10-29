@@ -9,7 +9,7 @@ A simple PID loop for ROS with support for multiple nodes with self isolating to
 * min - Minimum output value (Datatype: /std_msgs/Int32)
 
 # Topics Subscribed
-_Example node /link
+Example node /link
 * *node_name*_in (Ex: /link_in)
 
    Feedback input should be published to this topic
