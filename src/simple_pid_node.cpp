@@ -17,8 +17,8 @@ class pid_model {
         double dErr = (error - lastErr);
         lastErr = error;
         double value = (kp*error + ki*(errSum) + kd*dErr);
-        if(errSum>high){
-            errSum=high;
+        if(errSum>(high/ki){
+            errSum=high/ki;
         }
         if(value>=high)
             return high;
