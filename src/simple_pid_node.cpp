@@ -28,7 +28,7 @@ class pid_model {
         double value = (kp*error + ki*(errSum) + kd*dErr);
 	
 	//Intergral Limiter
-        if(errSum>(high/ki){
+        if(errSum>(high/ki)){
             errSum=high/ki;
         }
 
