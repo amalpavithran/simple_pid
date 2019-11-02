@@ -18,7 +18,7 @@ class pid_model {
         lastErr = error;
         double value = (kp*error + ki*(errSum) + kd*dErr);
         if(errSum>high){
-            errSum=0;
+            errSum=high;
         }
         if(value>=high)
             return high;
@@ -73,6 +73,7 @@ int main(int argc, char **argv)
     ROS_INFO("INITIALIZED");
     pid_model link1(kp,ki,kd,max,min,name,n);
     ROS_INFO("OBJECT CREATED");
+    ROS_INFO("PID LOOP STARTED");
     while(ros::ok()){
       ros::spinOnce();  
     }
