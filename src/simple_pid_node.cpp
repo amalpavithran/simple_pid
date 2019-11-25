@@ -51,9 +51,9 @@ class pid_model {
         name=topic;
 
 	//Creates or Subscribes to topics
-        link_in = n.subscribe(topic+"_in",1,&pid_model::get_in,this);
-        link_set = n.subscribe(topic+"_set",1,&pid_model::get_set,this);
-        link_out = n.advertise<std_msgs::Int32>(name+"_out",1);
+        link_in = n.subscribe(name+"/in",1,&pid_model::get_in,this);
+        link_set = n.subscribe(name+"/set",1,&pid_model::get_set,this);
+        link_out = n.advertise<std_msgs::Int32>(name+"/out",1);
     }
 
     //Input Callback Function

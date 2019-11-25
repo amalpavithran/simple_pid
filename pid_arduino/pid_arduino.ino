@@ -32,17 +32,17 @@ void link3( const std_msgs::Int32& msg){
   analogWrite(pwm3,abs(msg.data));
 }
 
-ros::Subscriber<std_msgs::Int32> sub1("link1_out", &link1 );
-ros::Subscriber<std_msgs::Int32> sub2("link2_out", &link2 );
-ros::Subscriber<std_msgs::Int32> sub3("link3_out", &link3 );
+ros::Subscriber<std_msgs::Int32> sub1("link1/out", &link1 );
+ros::Subscriber<std_msgs::Int32> sub2("link2/out", &link2 );
+ros::Subscriber<std_msgs::Int32> sub3("link3/out", &link3 );
 
 std_msgs::Int32 in1,in2,in3,set1,set2,set3;
-ros::Publisher pub1("link1_in",&in1);
-ros::Publisher pub2("link2_in",&in2);
-ros::Publisher pub3("link3_in",&in3);
-ros::Publisher pub4("link1_set",&set1);
-ros::Publisher pub5("link2_set",&set2);
-ros::Publisher pub6("link3_set",&set3);
+ros::Publisher pub1("link1/in",&in1);
+ros::Publisher pub2("link2/in",&in2);
+ros::Publisher pub3("link3/in",&in3);
+ros::Publisher pub4("link1/set",&set1);
+ros::Publisher pub5("link2/set",&set2);
+ros::Publisher pub6("link3/set",&set3);
 
 void setup()
 { 
