@@ -2,21 +2,21 @@
     <node name="serial" pkg="rosserial_arduino" type="serial_node.py" output="screen">
         <param name="~port" value="/dev/ttyACM0"/>
     </node>
-    <node name="link1" pkg="manip" type="manip_node" output="screen">
+    <node name="link1" pkg="simple_pid" type="simple_pid_node" output="screen">
         <param name="kp" value="11.0"/>
         <param name="ki" value="0.1"/>
         <param name="kd" value="0.03"/>
         <param name="max" value="255.0"/>
         <param name="min" value="-255.0"/>
     </node>
-    <node name="link2" pkg="manip" type="manip_node" output="screen">
+    <node name="link2" pkg="simple_pid" type="simple_pid_node" output="screen">
         <param name="kp" value="5.0"/>
         <param name="ki" value="0.2"/>
         <param name="kd" value="0.1"/>
         <param name="max" value="175.0"/>
         <param name="min" value="-175.0"/>
     </node>
-    <!--node name="link3" pkg="manip" type="manip_node" output="screen">
+    <!--node name="link3" pkg="simple_pid" type="simple_pid_node" output="screen">
         <param name="kp" value="11.0"/>
         <param name="kp" value="0.0"/>
         <param name="kp" value="0.0"/>
