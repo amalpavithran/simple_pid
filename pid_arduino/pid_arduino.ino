@@ -8,27 +8,15 @@ ros::NodeHandle  nh;
 #define dir2 42
 #define dir3 7
 void link1( const std_msgs::Int32& msg){
-  if(msg.data>0){
-    digitalWrite(dir1,HIGH);
-  }else{
-    digitalWrite(dir1,LOW);
-  }
+  digitalWrite(dir1,msg.data>0);
   analogWrite(pwm1,abs(msg.data));
 }
 void link2( const std_msgs::Int32& msg){
-  if(msg.data>0){
-    digitalWrite(dir2,HIGH);
-  }else{
-    digitalWrite(dir2,LOW);
-  }
+  digitalWrite(dir2,msg.data>0);
   analogWrite(pwm2,abs(msg.data));
 }
 void link3( const std_msgs::Int32& msg){
-  if(msg.data>0){
-    digitalWrite(dir3,LOW);
-  }else{
-    digitalWrite(dir3,LOW);
-  }
+  digitalWrite(dir3,msg.data>0);
   analogWrite(pwm3,abs(msg.data));
 }
 
